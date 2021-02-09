@@ -54,10 +54,13 @@ const population2021DividedInTwo = population / 2
 console.log(population2021DividedInTwo)
 console.log(population + 1)
 let populationFinland = 6;
-console.log( population > populationFinland)
+console.log( population > populationFinland);
 let populationAverage = 33;
-console.log( population > populationAverage)
-const description = 'Portugal is in Europe, and its 11 million people speak portuguese';
+console.log( population > populationAverage);
+const description = country + ' is in ' + continent + ' and its ' + population + ' million people speak ' + language;
+console.log(description);
+const descriptionTwo = `${country} is in ${continent} and its ${population} million people speak ${language}`;
+console.log(descriptionTwo);
 
 
 
@@ -91,14 +94,49 @@ let heightMark = 1.69;
 let massJohn = 92;
 let heighJohn = 1.95;
 
-massMark = 95;
+/* massMark = 95;
 heightMark = 1.88;
 massJohn = 85;
 heighJohn = 1.76;
-
+ */
 
 const BMIMark = massMark / (heightMark **2);
 const BMIJohn = massJohn / (heighJohn **2);
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
+
+if(population > populationAverage) {
+    console.log(`${country}s population is above average'`)
+   
+} else {
+    const belowAvarage = populationAverage - population
+    console.log(`${country}s population is ${belowAvarage} million below average'`) 
+}
+
+/* 
+Coding Challenge #2
+Use the BMI example from Challenge #1, and the code you already wrote, and improve it.
+Your tasks:
+1. Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
+2. Use a templateliteral to include the BMI values in the outputs. Example:"Mark's BMI (28.3) is higher than John's (23.9)!"
+Hint: Use an if/else statement 😉 GOOD LUCK 😀 */
+
+
+if (markHigherBMI) {
+    console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})`)
+} else {
+    console.log(`Mark's BMI (${BMIMark}) is lower than John's (${BMIJohn})`)
+}
+
+/* 
+LECTURE: Type Conversion and Coercion
+1. Predict the result of these 5 operations without executing them:
+'9' - '5'; number
+'19' - '13' + '17';  number // right answer string!
+'19' - '13' + 17; number
+'123' < 57; boolean
+5 + 6 + '4' + 9 - 4 - 2; number
+2. Execute the operations to check if you were right */
+
+console.log('9' - '5', '19' - '13' + '17' , '19' - '13' + 17 , '123' < 57 , 5 + 6 + '4' + 9 - 4 - 2 )
